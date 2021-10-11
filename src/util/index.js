@@ -1,6 +1,5 @@
 /* eslint-disable no-param-reassign */
 const nbt = require('prismarine-nbt');
-const util = require('util');
 
 const constants = require('../constants');
 
