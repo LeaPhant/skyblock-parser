@@ -4,8 +4,6 @@ const util = require('util');
 
 const constants = require('../constants');
 
-const parseNbt = util.promisify(nbt.parse);
-
 function removeFormatting(i) {
   return i.replace(/§./g, '');
 }
@@ -24,7 +22,7 @@ function titleCase(string) {
 }
 
 async function decodeData(buffer) {
-  const parsedNbt = await parseNbt(buffer);
+  const parsedNbt = await nbt.parse(buffer);
   return nbt.simplify(parsedNbt);
 }
 
