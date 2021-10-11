@@ -21,8 +21,8 @@ function titleCase(string) {
 }
 
 async function decodeData(buffer) {
-  const parsedNbt = await nbt.parse(buffer);
-  return nbt.simplify(parsedNbt);
+  const { parsed } = await nbt.parse(buffer);
+  return nbt.simplify(parsed);
 }
 
 function getNestedObjects(object = {}, pathString = '') {
