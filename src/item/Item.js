@@ -19,6 +19,7 @@ const itemSchema = {
   name: 'tag.display.Name',
   damage: 'Damage',
   lore: 'tag.display.Lore',
+  tag: 'tag'
 };
 
 const attributeSchema = {
